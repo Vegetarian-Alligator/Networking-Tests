@@ -31,6 +31,8 @@ int main(int argc, char *argv[]){
 		void *addr;
 		void *ipver;
 
+		//sockaddr_in is just a struct for explicit access to the important components of addrinfo	
+	
 		if (p->ai_family == AF_INET) {
 			struct sockaddr_in *ipv4 = (struct sockaddr_in *)p->ai_addr;
 			addr=&(ipv4->sin_addr);
